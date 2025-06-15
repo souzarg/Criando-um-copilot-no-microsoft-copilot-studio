@@ -1,0 +1,82 @@
+# Criando um Fluxo de Conversa Personalizado no Microsoft Copilot Studio
+
+## 🎯 O que é um Fluxo de Conversa?
+Um fluxo de conversa (ou "tópico") no Microsoft Copilot Studio é uma sequência lógica de interações entre o usuário e o copiloto. Ele é composto por **gatilhos**, **mensagens**, **perguntas** e **condições de decisão**, permitindo criar experiências conversacionais personalizadas.
+
+---
+
+## 🚀 Passo a Passo para Criar um Fluxo de Conversa Personalizado
+
+### 1. **Abra o Microsoft Copilot Studio**
+- Acesse: [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com)
+- Entre com sua conta organizacional ou educacional.
+
+---
+
+### 2. **Crie um Novo Tópico**
+- No menu lateral, clique em **“Tópicos”**
+- Clique em **“+ Novo tópico”**
+- Dê um nome ao tópico (ex: `Solicitar Férias`)
+
+---
+
+### 3. **Defina os Gatilhos**
+- Adicione palavras ou frases que ativam este fluxo (ex: “quero tirar férias”, “como pedir férias”)
+- Esses gatilhos ajudam o copiloto a identificar quando usar esse fluxo.
+
+---
+
+### 4. **Crie o Fluxo de Diálogo**
+Você será levado ao **editor de fluxo visual**, onde pode construir a conversa com os seguintes blocos:
+
+#### 🔹 **Mensagem**
+- Envia uma mensagem informativa para o usuário.
+  - Ex: “Entendi! Vamos iniciar o processo de solicitação de férias.”
+
+#### 🔹 **Pergunta**
+- Coleta dados do usuário, como datas ou preferências.
+  - Ex: “Qual a data de início das férias?”
+  - A resposta pode ser armazenada como variável.
+
+#### 🔹 **Condição**
+- Permite bifurcar a conversa com base em respostas.
+  - Exemplo: Se a data estiver indisponível → mostre mensagem de erro.
+
+#### 🔹 **Chamada a Ação (Power Automate)**
+- Integre com o **Power Automate** para automatizar ações como:
+  - Enviar e-mail
+  - Registrar no SharePoint
+  - Atualizar banco de dados
+
+---
+
+### 5. **Salvar Variáveis (opcional)**
+- Toda resposta pode ser armazenada em uma **variável**
+- Exemplo: salvar a data informada em `dataInicioFérias`
+
+---
+
+### 6. **Finalizar com Mensagem ou Redirecionamento**
+- Termine com uma confirmação (ex: “Sua solicitação foi registrada!”)
+- Ou redirecione para outro tópico existente.
+
+---
+
+### 7. **Testar e Publicar**
+- Clique em **"Testar Copilot"** no canto superior direito
+- Interaja com seu novo fluxo para validar as decisões
+- Se tudo estiver ok, clique em **"Publicar"**
+
+---
+
+## 🔁 Exemplo de Fluxo Simples
+
+**Gatilhos:** "quero tirar férias", "solicitar férias"  
+**Fluxo:**
+1. Mensagem: “Entendi! Vamos iniciar a solicitação.”
+2. Pergunta: “Qual o dia de início das suas férias?”
+3. Pergunta: “E qual será o dia final?”
+4. Mensagem: “Obrigado! Suas férias de X a Y foram registradas.”
+
+
+---
